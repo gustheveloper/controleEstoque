@@ -17,9 +17,10 @@ class CreateProducts extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description', 300);
-            $table->integer('quantity', 10);
+            $table->integer('quantity');
             $table->float('price', 10, 2);
-            $table->foreign('user_id')->references ('id')->on('users');                                                                            
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
