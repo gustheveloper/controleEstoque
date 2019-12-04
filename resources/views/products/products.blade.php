@@ -14,6 +14,7 @@
               <th scope="col">Descrição</th>
               <th scope="col">Quantidade</th>
               <th scope="col">Preço</th>
+              <th scope="col">Usuário</th>
               <th scope="col">Imagem</th>
               <th scope="col">Criado em</th>
               <th scope="col">Atualizado em</th>
@@ -28,9 +29,10 @@
               <td> {{$product->description}}</td>
               <td> {{$product->quantity}} </td>
               <td> R${{$product->price}} </td>
+              <td> {{$product->user->name}}</td>
               <td> null </td>
-              <td>{{$product->created_at}}</td>
-              <td>{{$product->updated_at}}</td>
+              <td> {{$product->created_at}}</td>
+              <td> {{$product->updated_at}}</td>
               <td>
                 <a href="/produtos/atualizar/{{$product->id}}" class="btn btn-primary">Atualizar</a>
                 <a href="/produtos/deletar/{{$product->id}}" class="btn btn-danger">Deletar</a>
